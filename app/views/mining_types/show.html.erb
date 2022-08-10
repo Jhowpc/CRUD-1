@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th><%= t('description') %></th>
+      <th><%= t('acronym') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @mining_type %>    
+  </tbody>
+</table>
+
+<div>
+  <%= link_to t('links.back'), mining_types_path %>  
+</div>
+
+

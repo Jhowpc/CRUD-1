@@ -1,0 +1,51 @@
+<p style="color: green"> <%= notice %> </p>
+<p> <strong> <%= t('dateword')%> </strong> <%= l(Date.today)%> <p>
+<h1> <%=t('coins.')%> </h1>
+<h2> <%= cookies[:curso]%> </h2>
+<h2> <%= session[:curso]%> </h2>
+<div id="Moedas">
+  <table>
+    <thead>
+      <tr>
+        <th> <%= t('description')%> </th>
+        <th> <%= t('acronym')%> </th>
+        <th><%= t('url_image')%></th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <% @coins.each do |coin| %>
+        <%= render coin %>
+      <% end %>
+    </tbody>
+  </table>  
+</div>
+
+<%= link_to t('links.add_new'), new_coin_path, class: "clink" %>
+<%= link_to t('links.homepage'), root_path, class: "clink" %>
+
+
+<style>
+  table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    color: #fff;
+
+  }
+
+  body {
+    background-image: asset-url('fundo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  }
+
+  .clink {
+    background-color: red;
+    color: white;
+    padding: 1em 1em;
+    border-collapse: collapse;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+</style>

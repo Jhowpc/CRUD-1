@@ -1,0 +1,69 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t "hello"
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t("hello") %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   "true": "foo"
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: 'Hello world'
+  actual_locale: 'English'
+  links:
+    edit: 'Edit'
+    show: 'Show'
+    delete: 'Delete'
+    back: 'Back'
+    add_new: 'Add new'
+    mining_types: 'Mining Types'
+    homepage: 'Homepage'
+    select: 'Select..'
+  notice:
+    coin_created: 'Coin created successfully.'
+    coin_updated: 'Coin updated successfully.'
+    coin_deleted: 'Coin deleted successfully'
+    mtype_created: 'Mining tipe created successfully.'
+    mtype_updated: 'Mining tipe updated successfully.'
+    mtype_deleted: 'Mining tipe deleted successfully.'
+  new_coin: 'New coin'
+  url_image: 'Url_image'
+  coins: 'Coins'
+  development: 'Development'
+  production: 'Production'
+  test: 'Test'
+  mining_types: 'Mining Types'
+  description: 'Description'
+  acronym: 'Acronym'
+  welcome: 'Welcome !'
+  dateword: 'Date'
+  edit_coin: 'Edit coin'
+  text1: 'The language used in this application is'
+  text2: 'Are you in an environment of'
+  text3: 'I am an instance/session variable'
+  text4: 'This is the course of'
+  textdel: "This item can't be deleted"
+  textsave: "This item can't be saved"
+  text_confirm_del: 'Are you sure?'

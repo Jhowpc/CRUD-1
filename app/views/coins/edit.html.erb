@@ -1,0 +1,12 @@
+<h1> <%= t('edit_coin')%> </h1>
+
+<%= render "form", coin: @coin %>
+
+<th>
+  <%= button_to t('links.delete'), @coin, form: { data: { turbo_confirm: t('text_confirm_del') } }, method: :delete %>
+</th> 
+<br>
+
+<div>
+  <%= link_to t('links.back'), coins_path %>
+</div>

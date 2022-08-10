@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+
+<h1 style="color: white"><%= t('links.mining_types')%></h1>
+
+<div id="mining_types">
+  <table>
+    <thead>
+      <tr>
+        <th><%= t('description') %></th>
+        <th><%= t('acronym') %></th>
+       <p>
+       </p>
+      </tr>
+    </thead>
+    <tbody>
+        <% @mining_types.each do |mining_type| %>
+        <%= render mining_type %>
+        <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to t('links.add_new'), new_mining_type_path %>
+
+<div>
+ <br> <strong> <%= link_to  t('links.back') , coins_path%> </strong>
+ <strong><%= link_to t('links.homepage'), root_path%></strong>
+</div>
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <p>
+      <%= link_to 'Português', root_path(locale: 'pt-BR') %>
+    </p>
+
+     <p>
+      <%= link_to 'English', root_path(locale: 'en') %>
+    </p>
+    <ul> <h1 style= "color:white"> <%=t('hello')%> </h1>
+      <p> <%=t('text1')%> : <strong> <%= t('actual_locale')%> </strong> </p>
+    </ul>
+  </head>
+  <body>
+    <p> <strong><%=t('dateword')%>:</strong> <%= l(Date.today)%> <p>
+    <p> <%= t('hello') %> </p>
+    </ul>
+    <%= render "menu" %>
+    <ul>
+    <p> <%=t('text2')%> : <strong> <%=ambiente_rails %> </strong>  <p> 
+    <p> <%=t('text3')%> : <strong> <%= @meu_nome %> </strong>
+    <p> <%=t('text4')%> : <strong> <%= @curso %> </strong>
+    </ul>
+  </body>
+</html>
+  
