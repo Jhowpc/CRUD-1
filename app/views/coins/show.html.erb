@@ -1,5 +1,5 @@
 <p style="color: blue"><%= notice %></p>
- <table class= "table table-dark">
+ <table class="table table-dark table-hover table-sm">
     <thead>
       <tr>
         <th> <%= t('description') %>  </th>
@@ -12,9 +12,6 @@
     </tbody>
   </table>
   <br />
-<div> 
-  <%= link_to t('links.back'), coins_path %>
 
-  <%= link_to t('links.homepage'), root_path%>
-</div>
-
+<button type="button" class="btn btn-outline-dark"><%= link_to t('links.back'), coins_path, class: "link-light" %></button>
+<button type="button" class="btn btn-outline-dark"><%= link_to t('links.homepage'), root_path, class: "link-light"%></button>
