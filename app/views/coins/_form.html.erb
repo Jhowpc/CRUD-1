@@ -2,7 +2,6 @@
   <% if coin.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(coin.errors.count, "error")%> <%=t('textsave')%>:</h2>
-
       <ul>
         <% coin.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -30,7 +29,6 @@
     <%= form.label t('mining_types') %>
     <br>
     <%= form.select("mining_type_id", @mining_type_options , { include_blank: t('links.select')})%>
-    <p>
   </div>
 
   <div>
