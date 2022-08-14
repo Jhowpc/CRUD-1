@@ -2,11 +2,9 @@
 
 <%= render "form", coin: @coin %>
 
-<th>
-  <%= button_to t('links.delete'), @coin, form: { data: { turbo_confirm: t('text_confirm_del') } }, method: :delete %>
-</th> 
-<br>
-
+<%= button_to t('links.delete'), @coin, form: { data: { turbo_confirm: t('text_confirm_del') } }, method: :delete, class: "btn btn-dark"%>
+</br>
 <div>
-  <%= link_to t('links.back'), coins_path, class: "link-light" %>
+  <%= link_to t('links.back'), coins_path, class: "btn btn-dark" %>
+  <%= link_to t('links.homepage'), root_path, class: "btn btn-dark"%>
 </div>

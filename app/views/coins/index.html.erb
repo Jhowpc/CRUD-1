@@ -1,15 +1,13 @@
 <p style="color: green"> <%= notice %> </p>
 <p> <strong> <%= t('dateword')%> </strong> <%= l(Date.today)%> <p>
-<h1> <%=t('coins.')%> </h1>
-<h2> <%= cookies[:curso]%> </h2>
-<h2> <%= session[:curso]%> </h2>
+<h1> <%=Coin.model_name.human(count: @coins.count)%> </h1>
 <div id="Moedas">
   <table class="table table-dark table-hover table-sm">
     <thead>
       <tr>
-        <th> <%= t('description')%> </th>
-        <th> <%= t('acronym')%> </th>
-        <th><%= t('url_image')%></th>
+        <th> <%= @coins.human_attribute_name(:description)%> </th>
+        <th> <%=@coins.human_attribute_name(:acronym)%> </th>
+        <th><%=@coins.human_attribute_name(:url_image)%></th>
       </tr>
     </thead>
     <tbody>

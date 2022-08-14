@@ -1,12 +1,11 @@
 <h1> <%= t('edit_mining_type')%></h1>
 
 <%= render "form", mining_type: @mining_type %>
-<th>
-  <%= button_to t('links.delete'), @mining_type, form: { data: { turbo_confirm: t('text_confirm_del') } }, method: :delete %>
-</th>
-<br>
+
+<%= button_to t('links.delete'), @mining_type, form: { data: { turbo_confirm: t('text_confirm_del') } }, method: :delete, class: "btn btn-dark" %>
+</br>
 <div> 
-  <%= link_to t('links.back'), mining_types_path %>
-  <%= link_to t('links.homepage'), root_path%>
+  <%= link_to t('links.back'), mining_types_path, class: "btn btn-dark" %>
+  <%= link_to t('links.homepage'), root_path, class: "btn btn-dark"%>
 </div>
 

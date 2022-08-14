@@ -10,19 +10,19 @@
       </ul>
     </div>
   <% end %>
+  <div class="grid text-center col-md-6 g-col-6" >
+    <div class="form-group" >
+      <%= form.label t('description'), style: "display: block" %></br>
+      <%= form.text_field :description, class: "form-control grid text-center ", placeholder: "ex: Proof of Work" %></br>
+    </div>
 
-  <div>
-    <%= form.label t('description'), style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
+    <div class="form-group">
+      <%= form.label t('acronym'), style: "display: block" %></br>
+      <%= form.text_field :acronym, class: "form-control grid text-center", placeholder: "ex: PoW" %></br>
+    </div>
 
-  <div>
-    <%= form.label t('acronym'), style: "display: block" %>
-    <%= form.text_field :acronym %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-  
+    <div class="form-check">
+      <%= form.submit nil, class: "btn btn-outline-light" %></br>
+    </div>
+  </div> 
 <% end %>

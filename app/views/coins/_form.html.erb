@@ -9,29 +9,29 @@
       </ul>
     </div>
   <% end %>
+  <div class="grid text-center col-md-6 g-col-6" >
+    <div class="form-group">
+      <%= form.label t('description'), style: "display: block" %></br>
+      <%= form.text_field :description, class: "form-control grid text-center ", placeholder: "ex: Bitcoin" %></br>
+    </div>
 
-  <div>
-    <%= form.label t('description'), style: "display: block" %>
-    <%= form.text_field :description %>
-  </div>
+    <div class="form-group">
+      <%= form.label t('acronym'), style: "display: block" %></br>
+      <%= form.text_field :acronym, class: "form-control grid text-center", placeholder: "ex: BTC" %></br>
+    </div>
 
-  <div>
-    <%= form.label t('acronym'), style: "display: block" %>
-    <%= form.text_field :acronym %>
-  </div>
+    <div class="form-group">
+      <%= form.label t('url_image'), style: "display: block" %></br>
+      <%= form.text_field :url_image, class: "form-control grid text-center", placeholder: "ex: https://img.ur/bitcoin.png" %></br>
+    </div>
 
-  <div>
-    <%= form.label t('url_image'), style: "display: block" %>
-    <%= form.text_field :url_image %>
-  </div>
-
-  <div class='field'>
-    <%= form.label t('mining_types') %>
-    <br>
-    <%= form.select("mining_type_id", @mining_type_options , { include_blank: t('links.select')})%>
-  </div>
-
-  <div>
-    <%= form.submit %>
+    <div class="form-group">
+      <p><%= form.label t('mining_types') %></p>
+      <%= form.select("mining_type_id", @mining_type_options , { include_blank: t('links.select')}, class: "form-select grid text-center")%></br>
+    </div>
+   
+    <div class="form-check">
+      <%= form.submit nil, class: "btn btn-outline-light"%>
+    </div>
   </div>
 <% end %>

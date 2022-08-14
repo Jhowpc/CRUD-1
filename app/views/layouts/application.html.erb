@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>CryptoJhow</title>
-  
+  <head>
+    <title>CryptoJhow</title>
     
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
+      
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %> 
+    
   
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => "reload" %> 
-  
- 
-  <%= javascript_importmap_tags %>
+    <%= javascript_importmap_tags %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
-</head>
+  </head>
 
-<body>
-  <div class="container-fluid">
-    <ul class="nav justify-content-end">
-      <li class="nav-item">
-        <%= link_to 'Português', root_path(locale: 'pt-BR'), class: "nav-link"%> 
-      </li>
-      <li class="nav-item">
-        <%= link_to 'English', root_path(locale: 'en'), class: "nav-link"%>
-      </li>
-    </ul>
-    <%= yield %>
-  </div>
-</body>
+  <body>
+    <div class="container-fluid">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <%= link_to 'Português', root_path(locale: 'pt-BR'), class: "nav-link"%> 
+        </li>
+        <li class="nav-item">
+          <%= link_to 'English', root_path(locale: 'en'), class: "nav-link"%>
+        </li>
+      </ul>
+      <%= yield %>
+    </div>
+  </body>
 </html>

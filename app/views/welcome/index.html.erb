@@ -4,30 +4,25 @@
     <div class="container-fluid py-5">
       <header class="pb-3 mb-4 border-top">     
       </header>
-        <div class="row align-items-md-stretch">
-          <div class="col-md-6">
-            <div class="h-100 p-5 text-bg-dark rounded-3">
-              <h1><%=t('hello')%> </h1>
-              <p>Esse é o CryptoJhow, um app para você criar e cadastrar criptomoedas.</p>
-              <p>Para começar, selecione uma opção abaixo:</p>
-              <%= render "menu" %>
+        <body>
+          <div class="row align-items-center grid text-center ">
+            <div class="col-md-6">
+              <div class="p-5 text-bg-dark rounded-3 ">
+                <h1><%=t('hello')%> </h1>
+                <p><%=t('text1')%></p>
+                <p><%=t('text2')%></p>
+                <%= render "menu" %>
+              </div>
             </div>
           </div>
-        </div>
-
+        </body>
       <footer class="pt-3 mt-4 text-muted ">
-       © 2022
+        <p> <strong><%=t('dateword')%>:</strong> <%= l(Date.today)%> <p>
+        © 2022
       </footer>
     </div>
   </head>
 
-  <body>
-    <p> <strong><%=t('dateword')%>:</strong> <%= l(Date.today)%> <p>
-    </ul>
-      
-    <ul>
-    <p> <%=t('text2')%> : <strong> <%=ambiente_rails %> </strong>  <p> 
-    <p> <%=t('text3')%> : <strong> <%= @meu_nome %> </strong>    
-  </body>
+
 </html>
 

@@ -60,10 +60,8 @@ en:
   welcome: 'Welcome !'
   dateword: 'Date'
   edit_coin: 'Edit coin'
-  text1: 'The language used in this application is'
-  text2: 'Are you in an environment of'
-  text3: 'I am an instance/session variable'
-  text4: 'This is the course of'
+  text1: 'This is CryptoJhow, an app for you to create and register cryptocurrencies.'
+  text2: 'To get started, select an option below:'
   textdel: "This item can't be deleted"
   textsave: "This item can't be saved"
   text_confirm_del: 'Are you sure?'
