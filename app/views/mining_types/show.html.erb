@@ -1,18 +1,17 @@
 <p style="color: green"><%= notice %></p>
-<table class="table table-dark table-striped">
-  <thead>
-    <tr>
-      <th><%= t('description') %></th>
-      <th><%= t('acronym') %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <%= render @mining_type %>    
-  </tbody>
-</table>
-
+<form class=" grid text-center col-md-6 g-col-6" >
+  <div class="form-group">
+    <%= label_tag nil, @mining_type.class.human_attribute_name(:description), style: "display: block" %></br>
+    <%= text_field_tag nil, @mining_type.description, class: "form-control", disabled: true%></br>    
+  </div>
+  <div class="form-group">
+    <%= label_tag nil, @mining_type.class.human_attribute_name(:acronym), style: "display: block" %></br>
+    <%= text_field_tag nil, @mining_type.acronym, class: "form-control", disabled: true%></br>
+  </div>
+</form>
 <div>
-  <%= link_to t('links.back'), mining_types_path, class: "btn btn-dark"%>  
+  <%= link_to t('links.back'), mining_types_path, class: "btn btn-dark"%>
+  <%= link_to t('links.homepage'), root_path, class: "btn btn-dark"%>  
 </div>
 
 
